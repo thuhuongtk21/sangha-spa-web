@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sản Phẩm Massage Chủ Lực - Sangha Spa</title>
+  <style>
+    /* === CẤU HÌNH HÌNH NỀN CHO BODY === */
+    body {
+        font-family: 'Arial', sans-serif;
+        margin: 0;
+        padding: 20px;
+        color: #333;
+
+        /* ĐƯỜNG DẪN ĐÚNG ĐẾN ẢNH NỀN ge*/
+        background-image: url('/images/massageTenTuoi.PNG');
+
+        /* Đảm bảo hình ảnh phủ kín toàn bộ trang */
+        background-size: cover;
+        /* Căn giữa hình ảnh */
+        background-position: center;
+        /* Giữ hình nền cố định khi cuộn trang */
+        background-attachment: fixed;
+        /* Chống lặp lại hình ảnh */
+        background-repeat: no-repeat;
+
+        /* Đảm bảo body chiếm ít nhất toàn bộ chiều cao màn hình */
+        min-height: 100vh;
+        display: flex;
+        align-items: center; /* Căn giữa nội dung theo chiều dọc */
+        justify-content: center; /* Căn giữa nội dung theo chiều ngang */
+    }
+
+    /* === TẠO LỚP PHỦ MỜ (OVERLAY) ĐỂ ĐỌC CHỮ RÕ HƠN === */
+    .container {
+        max-width: 800px;
+        width: 90%; /* Phù hợp với màn hình nhỏ */
+        margin: auto;
+        /* Màu nền trắng đục để làm nổi bật nội dung trên nền ảnh */
+        background: rgba(255, 255, 255, 0.95);
+        padding: 40px;
+        border-radius: 15px;
+        box-shadow: 0 10px 30px rgba(0,0,0,0.3); /* Đổ bóng đậm hơn một chút */
+        box-sizing: border-box; /* Đảm bảo padding không làm tăng kích thước */
+    }
+
+    h1 {
+        color: #d4af37;
+        text-align: center;
+        border-bottom: 2px solid #d4af37;
+        padding-bottom: 15px;
+        text-transform: uppercase;
+        margin-top: 0;
+    }
+
+    h2 {
+        color: #8d6e63;
+        font-style: italic;
+        text-align: center;
+        margin-bottom: 30px;
+    }
+
+    .service-list { list-style: none; padding: 0; margin: 0; }
+
+    .service-item {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 18px 0; /* Tăng padding một chút cho thoáng */
+        border-bottom: 1px dashed #ccc;
+    }
+
+    .service-name { font-size: 1.25em; font-weight: bold; }
+
+    .service-price { color: #e67e22; font-size: 1.15em; font-weight: bold; white-space: nowrap; }
+
+    .back-btn {
+        display: inline-block;
+        margin-top: 35px;
+        text-decoration: none;
+        color: #d4af37;
+        font-weight: bold;
+        font-size: 1.1em;
+    }
+    .back-btn:hover { text-decoration: underline; color: #b8932e; }
+
+    /* Hỗ trợ hiển thị trên điện thoại */
+    @media (max-width: 600px) {
+        .container { padding: 25px; }
+        h1 { font-size: 1.8em; }
+        .service-name { font-size: 1.1em; }
+        .service-price { font-size: 1.05em; }
+    }
+  </style>
+</head>
+<body>
+<div class="container">
+  <h1>SẢN PHẨM MASSAGE CHỦ LỰC</h1>
+  <h2>Những bài massage làm nên tên tuổi của Sangha Spa</h2>
+
+  <ul class="service-list">
+    <li class="service-item">
+      <span class="service-name">Massage body Thụy Điển</span>
+      <span class="service-price">230K / 60p</span>
+    </li>
+    <li class="service-item">
+      <span class="service-name">Massage chân</span>
+      <span class="service-price">190K / 60p</span>
+    </li>
+    <li class="service-item">
+      <span class="service-name">Massage Thái</span>
+      <span class="service-price">300K / 60p</span>
+    </li>
+    <li class="service-item">
+      <span class="service-name">Massage đá nóng</span>
+      <span class="service-price">370K / 90p</span>
+    </li>
+    <li class="service-item">
+      <span class="service-name">Massage vai gáy</span>
+      <span class="service-price">190K / 60p</span>
+    </li>
+  </ul>
+
+  <a href="/" class="back-btn">← Quay lại trang chủ</a>
+</div>
+</body>
+</html>

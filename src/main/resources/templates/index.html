@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sangha Massage spa</title>
+    <style>
+        body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    /* ĐƯỜNG DẪN ĐÚNG: Bắt đầu bằng dấu gạch chéo */
+    background-image: url('/images/img.png');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+        /* Tạo lớp phủ màu tối để làm nổi bật văn bản */
+        .overlay {
+            background-color: rgba(0, 0, 0, 0.6); /* Lớp phủ đen 60% */
+            width: 100%;
+            height: 100%;
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: -1; /* Đẩy xuống dưới menu */
+        }
+
+        header {
+            background-color: transparent; /* Làm trong suốt */
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+        }
+        header h1 {
+            font-size: 3em;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin: 0;
+            color: #d4af37; /* Màu vàng kim loại sang trọng */
+        }
+
+        /* Style cho Menu */
+        nav {
+            background: rgba(255, 255, 255, 0.9); /* Màu trắng đục */
+        }
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+        }
+        nav li { position: relative; }
+        nav a {
+            color: #333; /* Màu chữ menu */
+            padding: 15px 25px;
+            display: block;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        nav a:hover {
+            background: #d4af37; /* Màu nền khi rê chuột */
+            color: white;
+        }
+
+        /* Menu con (Dropdown) */
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: white;
+            min-width: 200px;
+            box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
+            z-index: 1;
+        }
+        .dropdown-content a { color: #333; padding: 12px 16px; font-weight: normal; }
+        .dropdown-content a:hover { background-color: #ddd; color: #333; }
+        .dropdown:hover .dropdown-content { display: block; }
+
+        .container {
+            padding: 100px 50px;
+            text-align: center;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+
+<div class="overlay"></div>
+<header>
+    <h1>SANGHA MASSAGE SPA</h1>
+</header>
+
+<nav>
+    <ul>
+        <li class="dropdown">
+            <a href="#">Dịch vụ ▼</a>
+            <div class="dropdown-content">
+                <a href="/massage-tri-lieu">Massage Trị Liệu</a>
+                <a href="#">Trị Liệu</a>
+            </div>
+        </li>
+
+        <li><a href="/bai-massage-ten-tuoi">Các bài massage làm nên tên tuổi</a></li>
+        <li><a href="/ve-chung-toi">Về chúng tôi</a></li>
+        <li class="dropdown">
+            <a href="#">Khách Hàng ▼</a>
+            <div class="dropdown-content">
+                <a href="/video-khach-hang">Videos</a>
+            </div>
+        </li>
+    </ul>
+</nav>
+
+<div class="container">
+    <h2>Chào mừng bạn đến với Sangha Massage Spa</h2>
+    <p>Nơi tìm lại sự cân bằng và thư giãn tuyệt đối cho cơ thể.</p>
+</div>
+
+<style>
+    .call-now-btn {
+        display: inline-block;
+        margin-top: 25px;
+        padding: 15px 30px;
+        background-color: #25d366; /* Màu xanh lá bắt mắt */
+        color: white;
+        text-decoration: none;
+        font-weight: bold;
+        font-size: 1.2em;
+        border-radius: 50px;
+        box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+        transition: all 0.3s ease;
+        animation: pulse 2s infinite; /* Hiệu ứng rung nhẹ */
+    }
+
+    .call-now-btn:hover {
+        background-color: #128c7e;
+        transform: scale(1.05);
+    }
+
+    /* Hiệu ứng rung nhẹ để thu hút sự chú ý */
+    @keyframes pulse {
+        0% { transform: scale(1); }
+        50% { transform: scale(1.05); }
+        100% { transform: scale(1); }
+    }
+
+    /* Nếu muốn nút này luôn dính ở góc màn hình điện thoại */
+    .sticky-call {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        z-index: 1000;
+    }
+</style>
+
+<div class="container">
+    <a href="tel:0967725327" class="call-now-btn">
+        📞 GỌI NGAY: 0967.725.327
+    </a>
+</div>
+
+</body>
+</html>
