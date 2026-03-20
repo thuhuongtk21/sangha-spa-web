@@ -85,6 +85,60 @@
             text-align: center;
             color: white;
         }
+
+        /* Style cho Popup */
+.popup-overlay {
+    display: none; /* Mặc định ẩn */
+    position: fixed;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background: rgba(0,0,0,0.7);
+    z-index: 9999;
+    justify-content: center;
+    align-items: center;
+}
+
+.popup-content {
+    background: #fffcf2;
+    padding: 30px;
+    border-radius: 15px;
+    text-align: center;
+    max-width: 400px;
+    position: relative;
+    border: 3px solid #d4af37;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+}
+
+.popup-content h2 { color: #d4af37; margin-top: 0; }
+.popup-content p { font-size: 1.1em; line-height: 1.5; }
+
+.voucher-code {
+    display: block;
+    margin: 15px 0;
+    padding: 10px;
+    background: #eee;
+    border: 2px dashed #d4af37;
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #333;
+}
+
+.close-popup {
+    position: absolute;
+    top: 10px; right: 15px;
+    font-size: 25px;
+    cursor: pointer;
+    color: #888;
+}
+
+.cta-popup-btn {
+    display: inline-block;
+    padding: 12px 25px;
+    background: #d4af37;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+}
     </style>
 </head>
 <body>
@@ -100,7 +154,8 @@
             <a href="#">Dịch vụ ▼</a>
             <div class="dropdown-content">
                 <a href="/massage-tri-lieu">Massage Trị Liệu</a>
-                <a href="#">Trị Liệu</a>
+                <a href="/massage-combo">Combo</a>
+                <a href="/tri-lieu">Trị Liệu</a>
             </div>
         </li>
 
@@ -184,6 +239,22 @@
     <a href="tel:0967725327" class="call-now-btn">
         📞 GỌI NGAY: 0967.725.327
     </a>
+    <style>
+        .zalo-btn {
+            display: inline-block;
+            margin-top: 15px;
+            padding: 15px 30px;
+            background-color: #0068ff;
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 50px;
+        }
+    </style>
+
+    <a href="https://zalo.me/0967725327" target="_blank" class="zalo-btn">
+        💬 CHAT ZALO ĐẶT LỊCH
+    </a>
 
     <br> <a href="https://www.google.com/maps/dir/?api=1&destination=Sangha+massage+spa+29+Tiểu+La+Đà+Nẵng"
             target="_blank"
@@ -192,5 +263,31 @@
 </a>
 </div>
 
+<div class="popup-overlay" id="voucherPopup">
+    <div class="popup-content">
+        <span class="close-popup" onclick="closePopup()">&times;</span>
+        <h2>🎁 QUÀ TẶNG KHÁCH MỚI</h2>
+        <p>Chào mừng bạn đến với <strong>Sangha Spa</strong>!<br>Nhận ngay ưu đãi giảm giá:</p>
+        <div class="voucher-code">GIẢM 10%</div>
+        <p><em>(Áp dụng cho tất cả các gói Trị Liệu)</em></p>
+        <a href="https://zalo.me/0967725327" class="cta-popup-btn">NHẬN ƯU ĐÃI QUA ZALO</a>
+    </div>
+</div>
+
 </body>
 </html>
+
+<script>
+    // Hiện popup sau 3 giây khi khách vào trang
+    window.onload = function() {
+        setTimeout(function() {
+            document.getElementById('voucherPopup').style.display = 'flex';
+        }, 3000);
+    };
+
+    // Hàm đóng popup
+    function closePopup() {
+        document.getElementById('voucherPopup').style.display = 'none';
+    }
+}
+</script>

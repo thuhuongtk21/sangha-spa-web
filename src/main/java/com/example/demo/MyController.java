@@ -29,4 +29,14 @@ public class MyController {
     public String videoKhachHangPage() {
         return "video-khach-hang"; // Trả về file video-khach-hang.html
     }
+
+    @GetMapping("/massage-combo")
+    public String massageComboPage() {
+        return "massage-combo"; // Trả về file massage-combo.html
+    }
+
+    @GetMapping("/tri-lieu")
+    public String triLieuPage() {
+        return "tri-lieu"; // Tên file tri-lieu.html
+    }
 }
